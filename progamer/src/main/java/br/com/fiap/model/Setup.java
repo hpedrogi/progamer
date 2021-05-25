@@ -10,14 +10,10 @@ import javax.persistence.Id;
 @Entity
 public class Setup {
 	
-	@Id 
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
 	private String name;
-	
 	private String description;
-	
 	private BigDecimal price = new BigDecimal(1000);
 
 	public Setup() {
@@ -51,11 +47,13 @@ public class Setup {
 		return id;
 	}
 
-	
-	
 	@Override
 	public String toString() {
 		return "Setup [name=" + name + ", description=" + description + ", price=" + price + "]";
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 	

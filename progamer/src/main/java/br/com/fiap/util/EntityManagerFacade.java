@@ -7,12 +7,9 @@ import javax.persistence.Persistence;
 public class EntityManagerFacade {
 	
 	public static EntityManager get() {
-		
-		EntityManagerFactory factory =
+		EntityManagerFactory factory = 
 				Persistence.createEntityManagerFactory("progamer-persistence-unit");
-		
 		return factory.createEntityManager();
-		
 	}
 
 }

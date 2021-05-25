@@ -19,21 +19,18 @@ public class SetupBean {
 	public void save() {
 		new SetupDAO().save(this.setup);
 		this.setup = new Setup();
-		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Setup cadastrado com sucesso"));
+		FacesContext.getCurrentInstance()
+			.addMessage(null, new FacesMessage("Setup cadastrado com sucesso"));
 	}
 	
 	public List<Setup> getSetups(){
-		return new SetupDAO().getALL();
+		return new SetupDAO().getAll();
 	}
 	
 	public void executar() {
 		System.out.println("acionando o bean");
 	}
-	
-	
-	
-	
-	
+
 	public Setup getSetup() {
 		return setup;
 	}
@@ -41,7 +38,8 @@ public class SetupBean {
 	public void setSetup(Setup setup) {
 		this.setup = setup;
 	}
+	
+	
 
-	
-	
+
 }
